@@ -25,7 +25,7 @@ $nick = strtolower(trim($nama[0])).mt_rand(10,99);
 $usr = curl('https://api.paxel.co/apg/api/v1/check-username', '{"username":"'.$nick.'"}', $headers);
 if (!strpos($usr[1], '"is_same":false')) goto Data;
 
-$regis = curl('https://api.paxel.co/apg/api/v1/register', '{"social_media_id":"","social_media_type":"","first_name":"'.trim($nama[0]).'","last_name":"'.trim($nama[1]).'","refer_by":"gidhan","phone":"'.$nomer.'","token":"'.$otp.'","username":"'.$nick.'","password":"anjay123","email":"","referrer_source":"google-play","campaign":""}', $headers);
+$regis = curl('https://api.paxel.co/apg/api/v1/register', '{"social_media_id":"","social_media_type":"","first_name":"'.trim($nama[0]).'","last_name":"'.trim($nama[1]).'","refer_by":"'.$reff.'","phone":"'.$nomer.'","token":"'.$otp.'","username":"'.$nick.'","password":"anjay123","email":"","referrer_source":"google-play","campaign":""}', $headers);
 echo "\n";
 echo color('green', "[+]")." ".$regis[1]."\n";
 
