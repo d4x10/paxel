@@ -1,13 +1,12 @@
 <?php
 
 $headers = array(); 
-$headers[] = 'accept: application/json, text/plain, */*';
 $headers[] = 'x-player: 311b057f-1542-4f4c-ab73-'.random(12);
 $headers[] = 'content-type: application/json';
 $headers[] = 'user-agent: okhttp/3.12.1';
 
 echo color('blue', "[+]")." Bot Paxel - By : GidhanB.A\n";
-echo color('blue', "[+]")." Nomer HP: ";
+echo color('blue', "[+]")." Phone: ";
 $nomer = trim(fgets(STDIN));
 $cek = curl('https://api.paxel.co/apg/api/v1/me/phone-token?on=register', '{"phone":"'.$nomer.'","referral_code":""}', $headers);
 
@@ -15,7 +14,7 @@ echo color('blue', "[+]")." OTP: ";
 $otp = trim(fgets(STDIN));
 $ver = curl('https://api.paxel.co/apg/api/v1/me/phone-token/validate', '{"phone":"'.$nomer.'","token":"'.$otp.'"}', $headers);
 
-echo color('blue', "[+]")." Reff: ";
+echo color('blue', "[+]")." Referral: ";
 $reff = trim(fgets(STDIN));
 
 Data:
