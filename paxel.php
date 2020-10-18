@@ -6,15 +6,15 @@ $headers[] = 'content-type: application/json';
 $headers[] = 'user-agent: okhttp/3.12.1';
 
 echo color('blue', "[+]")." Bot Paxel - By : GidhanB.A\n";
-echo color('blue', "[+]")." Phone: ";
+echo color('blue', "[+]")." No. Hp: ";
 $nomer = trim(fgets(STDIN));
 $cek = curl('https://api.paxel.co/apg/api/v1/me/phone-token?on=register', '{"phone":"'.$nomer.'","referral_code":""}', $headers);
 
-echo color('blue', "[+]")." OTP: ";
+echo color('blue', "[+]")." Kode OTP: ";
 $otp = trim(fgets(STDIN));
 $ver = curl('https://api.paxel.co/apg/api/v1/me/phone-token/validate', '{"phone":"'.$nomer.'","token":"'.$otp.'"}', $headers);
 
-echo color('blue', "[+]")." Referral: ";
+echo color('blue', "[+]")." Reff: ";
 $reff = trim(fgets(STDIN));
 
 Data:
