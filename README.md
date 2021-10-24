@@ -1,1 +1,1 @@
-# Paxel.co
+# Paxel.com
